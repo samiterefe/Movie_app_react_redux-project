@@ -9,9 +9,11 @@ const Header = () => {
       <Link to="/">
         <div className="logo">Movie App</div>
       </Link>
+      <Link to="/samuel">
       <div className="user-image">
         <img src={user} alt="user" />
       </div>
+      </Link>
     </div>
   );
 };

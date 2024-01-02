@@ -1,5 +1,4 @@
 import React from "react";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Header from "./components/Header/Header";
@@ -16,14 +15,15 @@ function App() {
        <Header></Header>
       <Routes>
         
-        <Route path="/" exact element={<Home />}>
-        <Route path="/movie/:imdbID" component={MovieDetail} />
-        <Route component={PageNotFound} />
-        </Route>
+        <Route path="/"  element={<Home />} />
+        <Route path="/movie/:imdbID" element={<MovieDetail/>} />
+        <Route path="/*"  element={<PageNotFound/>} />
+        
       </Routes>
-      <Footer />
+      
       </div>
       </BrowserRouter>
+      <Footer />
    
         
       
